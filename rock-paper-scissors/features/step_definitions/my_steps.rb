@@ -10,3 +10,11 @@ end
 Then(/^I should see "(.*?)"$/) do |content|
   expect(page).to have_content content
 end
+
+When(/^I see "(.*?)"$/) do |content|
+  expect(page).to have_content content
+end
+
+When(/^I push the "(.*?)" button$/) do |button|
+  click_on(button)
+end
