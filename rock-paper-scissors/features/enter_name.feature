@@ -5,5 +5,5 @@ Feature: Entering a name
 
 	Scenario: Entering a name
 		Given I am on the homepage
-		When I enter "Gabe" in the "Name" field
-		Then I should see "Hi Gabe, let's play Rock, Paper, Scissors"
+		When I enter "Gabe" in the "name" field
+		Then I should see "Hi Gabe - let's play Rock, Paper, Scissors!"
