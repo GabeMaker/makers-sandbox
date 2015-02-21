@@ -4,15 +4,19 @@ Feature:
 	I want to choose rock, paper or scissors
 	
 	Background:
-		Given I am on the homepage
-		When I enter "Gabe" in the "name" field
-		Then I should see "Hi Gabe - let's play Rock, Paper, Scissors!"
+		Given I have already registered
 
-	Scenario: Choosing Rock When opponent picks Paper
+	Scenario: Losing with Rock
+		Given opponent randomly picks "Paper"
 		When I see "Pick one:"
 		And I push the "Rock" button
 		Then I should see "Sorry Gabe, you lose"
 
+	Scenario: Winning with Rock 
+		Given opponent randomly picks "Scissors"
+		When I see "Pick one:"
+		And I push the "Rock" button
+		Then I should see "Sorry Gabe, you lose"
 
 
 
