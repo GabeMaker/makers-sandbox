@@ -26,14 +26,22 @@ describe Game do
   end
 
   it 'can decide a winner' do
-    rock_player     = double :player1, shape: :rock
-    scissors_player = double :player2, shape: :scissors
+    rock_player     = double :rock, shape: :rock
+    scissors_player = double :scissors, shape: :scissors
     game.add rock_player
     game.add scissors_player
 
     expect(game.winner).to eq rock_player
   end 
 
-  xit 'knows that rock loses to paper'
+  it 'knows that rock beats scissors' do
+    rock_player     = double :rock, shape: :rock
+    scissors_player = double :scissors, shape: :scissors
+    game.add scissors_player
+    game.add rock_player
+
+    expect(game.winner).to eq rock_player
+  end
+
 
 end
