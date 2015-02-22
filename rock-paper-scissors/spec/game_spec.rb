@@ -61,4 +61,13 @@ describe Game do
     expect(game.winner).to eq paper_player
   end
 
+  it 'knows when the game is tied' do
+    rock_player  = double :rock, shape: :rock
+    game.add rock_player
+    game.add rock_player
+
+    expect(game.winner).to eq :tie
+  end
+
+
 end

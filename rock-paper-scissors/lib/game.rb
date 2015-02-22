@@ -26,6 +26,8 @@ class Game
       @winner = player_two
     elsif player_two.shape == :rock && player_one.shape == :paper
       @winner = player_one
+    else
+      @winner = :tie
     end
 
 
