@@ -1,23 +1,15 @@
 class Player
-  attr_reader :weapon
+  
+  attr_reader :name, :shape
 
-  def pick(weapon)
-    @weapon = weapon
+  def initialize(options={})
+    @name = options.fetch(:name)
+  end
+
+  def pick(shape)
+    @shape = shape
   end
 end
-
-# class Player
-#   def initialize(opt = {})
-#     @name = opt.fetch(:name)
-#   end
-
-#   attr_reader :name
-
-#   def pick(weapon)
-#     @pick = weapon
-#   end
-# end
-
 
 # class Computer < Player
 #   def choose_weapon
