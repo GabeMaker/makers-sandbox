@@ -21,7 +21,7 @@ end
 
 Given(/^opponent randomly picks "(.*?)"$/) do |pick|
   # we want to set the computer's pick to 'pick'
-  Capybara.app::GAME.player_two.pick(pick)
+  Capybara.app::GAME.player_one.pick(pick.downcase.to_sym)
 end
 
 Given(/^I have already registered$/) do

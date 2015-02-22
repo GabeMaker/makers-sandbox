@@ -8,9 +8,10 @@ class Game
 
   def add(player)
     raise "Sorry, you can't have more than two players" if players.count == 2
+
+    @player_one = player if players.count == 0
+    @player_two = player if players.count == 1 && players
     players << player
-    @player_one = player if players.count == 1
-    @player_two = player if players.count == 2
   end
 
   def winner
