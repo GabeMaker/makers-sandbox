@@ -1,3 +1,11 @@
+class Player
+  attr_reader :weapon
+
+  def pick(weapon)
+    @weapon = weapon
+  end
+end
+
 # class Player
 #   def initialize(opt = {})
 #     @name = opt.fetch(:name)
@@ -17,13 +25,7 @@
 #   end
 # end
 
-class Player
-  attr_reader :weapon
 
-  def pick(weapon)
-    @weapon = weapon
-  end
-end
 
 
 

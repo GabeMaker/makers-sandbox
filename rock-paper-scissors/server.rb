@@ -21,10 +21,10 @@ class RPS < Sinatra::Base
     "Sorry Gabe, you lose"
   end
 
-  post '/chose_pick' do
-    pick = params[:pick]
-    GAME.player_two.pick pick
-  end
+  # post '/chose_pick' do
+  #   pick = params[:pick]
+  #   # GAME.player_two.pick pick
+  # end
 
   # @winner_name = GAME.winer.name
 
