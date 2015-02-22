@@ -18,7 +18,12 @@ class Game
       @winner = player_one
     elsif player_two.shape == :rock && player_one.shape == :scissors
       @winner = player_two
+    elsif player_one.shape == :scissors && player_two.shape == :paper
+      @winner = player_one
+    elsif player_two.shape == :scissors && player_one.shape == :paper
+      @winner = player_two
     end
+
 
     # players.each do |player|
     #   # opponent = players.reject { player == player }.

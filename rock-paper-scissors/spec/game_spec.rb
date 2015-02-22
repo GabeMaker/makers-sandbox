@@ -43,5 +43,13 @@ describe Game do
     expect(game.winner).to eq rock_player
   end
 
+  it 'knows that scissors beats paper' do
+    scissors_player = double :scissors, shape: :scissors
+    paper_player = double :paper, shape: :paper
+    game.add paper_player
+    game.add scissors_player
+
+    expect(game.winner).to eq scissors_player
+  end
 
 end
