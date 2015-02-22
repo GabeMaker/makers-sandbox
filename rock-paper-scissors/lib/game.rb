@@ -44,6 +44,12 @@ class Game
     # end
   end
 
+  def clear_game
+    @players = nil
+    @player_one = nil
+    @player_two = nil
+  end
+
 end
 
 
