@@ -22,6 +22,10 @@ class Game
       @winner = player_one
     elsif player_two.shape == :scissors && player_one.shape == :paper
       @winner = player_two
+    elsif player_one.shape == :rock && player_two.shape == :paper
+      @winner = player_two
+    elsif player_two.shape == :rock && player_one.shape == :paper
+      @winner = player_one
     end
 
 
