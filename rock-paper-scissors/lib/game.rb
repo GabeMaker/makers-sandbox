@@ -11,6 +11,10 @@ class Game
     players << player
   end
 
+  def winner
+    players.first
+  end
+
 end
 
 
