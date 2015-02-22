@@ -1,6 +1,6 @@
 class Game
 
-  attr_reader :players
+  attr_reader   :players, :player_one, :player_two
 
   def initialize
     @players = []
@@ -9,10 +9,28 @@ class Game
   def add(player)
     raise "Sorry, you can't have more than two players" if players.count == 2
     players << player
+    @player_one = player if players.count == 1
+    @player_two = player if players.count == 2
   end
 
   def winner
-    players.first
+    if player_one.shape == :rock && player_two.shape == :scissors
+      @winner = player_one
+    elsif player_two.shape == :rock && player_one.shape == :scissors
+      @winner = player_two
+    end
+
+    # players.each do |player|
+    #   # opponent = players.reject { player == player }.
+    #   array_without_player = players
+    #   array_without_player.delete player
+    #   opponent = array_without_player.first
+    #   puts opponent
+
+    #   if player.shape == :rock && opponent.shape == :scissors
+    #     @winner = player.flatten
+    #   end
+    # end
   end
 
 end
