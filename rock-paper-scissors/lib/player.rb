@@ -3,7 +3,7 @@ class Player
   attr_reader :name, :shape
 
   def initialize(options={})
-    @name = options.fetch(:name)
+    @name = options.fetch :name, nil
   end
 
   def pick(shape)
