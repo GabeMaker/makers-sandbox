@@ -4,12 +4,21 @@ class Game
 
   def initialize
     @players = []
-  end 
-
-  def player_two
-    Player.new
   end
+
+  def add(player)
+    raise "Sorry, you can't have more than two players" if players.count == 2
+    players << player
+  end
+
 end
+
+
+
+#   def player_two
+#     Player.new
+#   end
+# end
 
 
 # class Game
