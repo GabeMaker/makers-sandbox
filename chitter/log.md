@@ -96,4 +96,12 @@ This worked.
 
 > /Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/data_objects-0.10.15/lib/data_objects/connection.rb:79:in `initialize': FATAL:  database "chitter" does not exist (DataObjects::ConnectionError)
 
-- now it's time to create the chitter database in psql
+- Now it's time to create the chitter database in psql.
+
+- Trying to add a user to database via irb
+
+**Next error:** $ user = User.create("u","n","e","p")
+
+> NoMethodError: undefined method `each' for "u":String from /Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/dm-core-1.2.1/lib/dm-core/resource.rb:332:in `attributes='
+
+- Will try to look at how tutorial deals with creating new instances of model classes. **solved** needed to require server.rb (which requires users too) rather than just requiring users.rb

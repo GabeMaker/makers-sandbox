@@ -8,7 +8,7 @@ require './user'
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-# set :root, File.dirname(__FILE__)
+set :root, File.dirname(__FILE__)
 
 get '/' do
   "Hello"
