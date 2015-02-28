@@ -16,3 +16,14 @@ The first 3 were definitely done in bookmark manager. Posting a message is a bit
 **Problem:** I don't know how to start
 
 **Solution:** I won't always have a walkthrough, but it's early days and I do have one now, so why not use it? These are also pretty standard things I'll likely have to do many times. My next step is to truncate the walkthrough to clear steps. Then see if I want to follow them in this new project
+
+
+# What is happening in the tutorial:
+- Write user stories / features
+- Produce user interface experience sketch
+
+- Create an empty Sinatra app
+- Install ORM and ensure it works with db engine (postgres)
+
+- Create first model (things that will be going into a table e.g. links/tweets)
+
