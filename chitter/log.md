@@ -67,7 +67,14 @@ configuration config.ru not found
 - **Problem:** Sinatra not displaying webpage:
 
 > Boot Error
+
 > Something went wrong while loading config.ru
+
 > RuntimeError: missing run or map statement
 
 
+- **Tried:** opening up previous examples of config.ru files; googling config.ru
+
+Don't know what file to use the 'run' command in abscence of a line like "class SimpleApp < Sinatra::Base"
+
+- **Tried:** not using rackup or sinatra, deleted .ru file for now
