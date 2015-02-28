@@ -18,7 +18,8 @@ The first 3 were definitely done in bookmark manager. Posting a message is a bit
 **Solution:** I won't always have a walkthrough, but it's early days and I do have one now, so why not use it? These are also pretty standard things I'll likely have to do many times. My next step is to truncate the walkthrough to clear steps. Then see if I want to follow them in this new project
 
 
-# What is happening in the tutorial:
+## Steps in walkthrough:
+
 - Write user stories / features
 - Produce user interface experience sketch
 
@@ -27,3 +28,23 @@ The first 3 were definitely done in bookmark manager. Posting a message is a bit
 
 - Create first model (things that will be going into a table e.g. links/tweets)
 
+- Create database
+
+- Ensure that controller/server knows where db is
+
+- Demo test of first model (and cleaning the db)
+
+- First integration test (signing up)
+
+
+### Signing up
+
+First step is to write a feature test. This will involve entering:
+- email
+- password (confirmation can wait at this stage)
+- name
+- user name
+
+Then being greeted by user name and being confirmed as signed up
+
+**Now is a good time to try writing some code, following these steps as best I can**
