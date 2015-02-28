@@ -78,3 +78,22 @@ configuration config.ru not found
 Don't know what file to use the 'run' command in abscence of a line like "class SimpleApp < Sinatra::Base"
 
 - **Tried:** not using rackup or sinatra, deleted .ru file for now
+
+This worked.
+
+**Next error:** $ ruby server.rb
+> /Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/dm-core-1.2.1/lib/dm-core/model.rb:865:in `assert_valid_key': User must have a key to be valid (DataMapper::IncompleteModelError)
+
+- added id property to user
+
+**Next error:** $ ruby server.rb
+
+> /Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/data_objects-0.10.15/lib/data_objects/connection.rb:79:in `initialize': could not connect to server: Connection refused (DataObjects::ConnectionError)
+
+- need to set up database? Tried starting my PostgreSQL desktop client.
+
+**Next error:** $ ruby server.rb
+
+> /Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/data_objects-0.10.15/lib/data_objects/connection.rb:79:in `initialize': FATAL:  database "chitter" does not exist (DataObjects::ConnectionError)
+
+- now it's time to create the chitter database in psql
