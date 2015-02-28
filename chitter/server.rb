@@ -3,7 +3,7 @@ require 'data_mapper'
 
 DataMapper.setup(:default, "postgres://localhost/chitter")
 
-require './user'
+require './lib/user'
 
 DataMapper.finalize
 DataMapper.auto_upgrade!

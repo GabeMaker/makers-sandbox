@@ -105,3 +105,17 @@ This worked.
 > NoMethodError: undefined method `each' for "u":String from /Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/dm-core-1.2.1/lib/dm-core/resource.rb:332:in `attributes='
 
 - Will try to look at how tutorial deals with creating new instances of model classes. **solved** needed to require server.rb (which requires users too) rather than just requiring users.rb
+
+###Commit
+"Can manipulate db in irb": Next step to start integration tests with this very basic set-up
+
+**ERROR**
+
+Having huge difficulties with taking the 'classic' Sinatra approach, rather than modular
+
+>Failure/Error: visit '/'
+>ArgumentError:
+>rack-test requires a rack application, but none was given
+
+**SOLUTION**
+inserted in spec file: Capybara.app = Sinatra::Application
