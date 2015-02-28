@@ -1,3 +1,5 @@
+# Log of Progress through challenge:
+
 **Problem:** Blank Slate Syndrome
 
 **Solution:** read through challenge
@@ -119,3 +121,10 @@ Having huge difficulties with taking the 'classic' Sinatra approach, rather than
 
 **SOLUTION**
 inserted in spec file: Capybara.app = Sinatra::Application
+
+**ERROR**
+
+>Failure/Error: visit '/'
+>NoMethodError: undefined method `join' for #<String:0x007fed8d29a798>
+
+I *believe* this error happens when there is a redirect to an erb file that does not exist. It disappeared when I created index.erb

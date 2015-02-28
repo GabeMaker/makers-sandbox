@@ -8,6 +8,7 @@ Capybara.app = Sinatra::Application
 feature "Sign up" do
 
   scenario "A new user should be able to sign up" do
+    visit '/'
     expect { sign_up }.to change(User, :count).by 1
   end
 
@@ -15,8 +16,7 @@ feature "Sign up" do
               name = "Samu Joseph",
               email = "sam@makersacademy.com",
               password = "s3cr3t")
-    visit '/'
-    click_on('sign up!')
+    click_on('Sign-up!')
     fill_in :username, :with => username
     fill_in :name, :with => name
     fill_in :email, :with => email
