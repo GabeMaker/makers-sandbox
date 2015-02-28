@@ -48,3 +48,26 @@ First step is to write a feature test. This will involve entering:
 Then being greeted by user name and being confirmed as signed up
 
 **Now is a good time to try writing some code, following these steps as best I can**
+
+#Progress Log:
+
+- created skeleton server.rb then tried to run rackup/shotgun
+- **Problem:**
+
+configuration /Makers-sandbox/config.ru not found
+
+configuration config.ru not found
+
+- **Tried:** creating blank config.ru in same directory. Works for shotgun. Rackup throwing:
+
+/Users/Gabriel/.rvm/gems/ruby-2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:146:in `to_app': missing run or map statement (RuntimeError)
+
+- create user.rb
+
+- **Problem:** Sinatra not displaying webpage:
+
+> Boot Error
+> Something went wrong while loading config.ru
+> RuntimeError: missing run or map statement
+
+
