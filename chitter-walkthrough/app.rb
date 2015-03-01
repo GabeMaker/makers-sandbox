@@ -11,6 +11,9 @@ require './lib/user'
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
+enable :sessions
+set :session_secret, 'super secret'
+
 get '/' do
   @cheets = Cheet.all
   erb :index
@@ -27,13 +30,14 @@ get '/users/new' do
 end
 
 post '/users' do
-  User.create(username: params[:username],
-              password: params[:password])
+  user = User.create(username: params[:username],
+                     password: params[:password])
+  session[:user_id] = user.id
   redirect to ('/')
 end
 
-# post '/users' do
-#   User.create(:email => params[:email],
-#               :password => params[:password])
-#   redirect to('/')
-# end
+helpers do
+  def current_user
+    @current_user ||=User.get(session[:user_id]) if session[:user_id]
+  end
+end

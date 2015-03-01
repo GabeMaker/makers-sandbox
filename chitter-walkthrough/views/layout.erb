@@ -1,0 +1,6 @@
+<body>
+  <% if current_user %>
+    Hi <%= current_user.username %>!
+  <% end %>
+  <%= yield %>
+</body>
