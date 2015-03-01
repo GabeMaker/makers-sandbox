@@ -30,11 +30,15 @@ get '/users/new' do
 end
 
 post '/users' do
-  user = User.create(username: params[:username],
+  user = User.new(username: params[:username],
                      password: params[:password],
                      password_confirmation: params[:password_confirmation])
-  session[:user_id] = user.id
-  redirect to ('/')
+  if user.save
+    session[:user_id] = user.id
+    redirect to ('/')
+  else
+    erb :"users/new"
+  end
 end
 
 helpers do
