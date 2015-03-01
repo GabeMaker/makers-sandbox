@@ -8,8 +8,8 @@ scenario "when a new user visits the site" do
     expect(User.first.username).to eq("GabeMaker")
   end
 
-  def sign_up(username = GabeMaker,
-              password = testcoderepeat)
+  def sign_up(username = "GabeMaker",
+              password = "testcoderepeat")
     visit '/sign_up'
     expect(page.status_code).to eq(200)
     fill_in :username, :with => username
