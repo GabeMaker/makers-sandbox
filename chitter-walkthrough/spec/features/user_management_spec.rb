@@ -1,5 +1,37 @@
 require 'spec_helper'
 
+
+feature "User signs in" do
+
+  before(:each) do
+    User.create(:password => 'password',
+                :password_confirmation => 'password',
+                :username => 'test')
+  end
+
+  scenario "with correct credentials" do
+    visit '/'
+    expect(page).not_to have_content("Hi test")
+    sign_in('test', 'password')
+    expect(page).to have_content("Hi test")
+  end
+
+  scenario "with incorrect credentials" do
+    visit '/'
+    expect(page).not_to have_content("Hi test")
+    sign_in('test', 'wrong')
+    expect(page).not_to have_content("Hi")
+  end
+
+  def sign_in(username, password)
+    visit '/sessions/new'
+    fill_in 'username', :with => username
+    fill_in 'password', :with => password
+    click_button 'Sign in!'
+  end
+
+end
+
 feature "User signs up" do
 
   scenario "when a new user visits the site" do
@@ -28,7 +60,7 @@ feature "User signs up" do
   scenario "when a password doesn't match" do
     expect{ sign_up('Test', 'Right', 'Wrong') }.to change(User, :count).by(0)
     expect(current_path).to eq('/users')
-    expect(page).to have_content("Sorry, your passwords don't match")
+    expect(page).to have_content("Your passwords don't match")
   end
 
   scenario "with an email that is already registered" do
@@ -37,7 +69,7 @@ feature "User signs up" do
     expect(page).to have_content("This email is already taken")
   end
 
-  scenario "with an email that is already registered" do
+  scenario "with a username that is already registered" do
     expect{ sign_up }.to change(User, :count).by(1)
     expect{ sign_up }.to change(User, :count).by(0)
     expect(page).to have_content("This username is already taken")
