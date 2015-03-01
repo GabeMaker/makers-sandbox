@@ -2,6 +2,10 @@
 
   <% if current_user %>
     Hi <%= current_user.username %>!
+    <form method="post" action="/sessions">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign out">
+    </form>
   <% end %>
   <%= yield %>
 
@@ -14,4 +18,17 @@
     </ul>
   <% end %>
 
+  <% if flash[:notice] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
 </body>
+
+
+
+  <% if current_user %>
+
+
+  <% end %>

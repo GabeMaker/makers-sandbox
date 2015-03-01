@@ -15,6 +15,7 @@ DataMapper.auto_upgrade!
 enable :sessions
 set :session_secret, 'encryption key'
 use Rack::Flash
+use Rack::MethodOverride
 
 get '/' do
   @cheets = Cheet.all
@@ -63,6 +64,12 @@ post '/sessions' do
     flash[:errors] = ["The email or password is incorrect"]
     erb :"sessions/new"
   end
+end
+
+delete '/sessions' do
+  flash[:notice] = "Good bye!"
+  session[:user_id] = nil
+  redirect to('/')
 end
 
 helpers do
