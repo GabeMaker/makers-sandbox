@@ -10,7 +10,7 @@ scenario "when a new user visits the site" do
 
   def sign_up(username = "GabeMaker",
               password = "testcoderepeat")
-    visit '/sign_up'
+    visit '/users/new'
     expect(page.status_code).to eq(200)
     fill_in :username, :with => username
     fill_in :password, :with => password

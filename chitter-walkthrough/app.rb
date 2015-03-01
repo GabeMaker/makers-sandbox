@@ -21,3 +21,19 @@ post '/cheets' do
   Cheet.create(:text => content, :time => Time.now.to_s)
   redirect to('/')
 end
+
+get '/users/new' do
+  erb :"users/new"
+end
+
+post '/users' do
+  User.create(username: params[:username],
+              password: params[:password])
+  redirect to ('/')
+end
+
+# post '/users' do
+#   User.create(:email => params[:email],
+#               :password => params[:password])
+#   redirect to('/')
+# end
