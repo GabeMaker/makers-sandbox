@@ -14,3 +14,9 @@ get '/' do
   @cheets = Cheet.all
   erb :index
 end
+
+post '/cheets' do
+  content = params["content"]
+  Cheet.create(:text => content, :time => Time.now.to_s)
+  redirect to('/')
+end
