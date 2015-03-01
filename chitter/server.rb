@@ -19,5 +19,9 @@ get '/sign_up' do
 end
 
 post '/new_user' do
-  user = User.create
+  username = params["username"]
+  name = params["name"]
+  email = params["email"]
+  password = params["password"]
+  user = User.create(username: username, name: name, email: email, password: password)
 end

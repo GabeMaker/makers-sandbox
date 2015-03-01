@@ -10,6 +10,8 @@ feature "Sign up" do
   scenario "A new user should be able to sign up" do
     visit '/'
     expect { sign_up }.to change(User, :count).by 1
+    expect(User.first.username).to eq "tansaku"
+    User.destroy
   end
 
   def sign_up(username = "tansaku",
@@ -23,5 +25,12 @@ feature "Sign up" do
     fill_in :password, :with => password
     click_button "Sign up"
   end
+
+  # scenario "new users details should be available to the app" do
+  #   visit '/'
+  #   sign_up
+  #   expect(User.first.username).to eq "tansaku"
+  # end
+
 
 end
