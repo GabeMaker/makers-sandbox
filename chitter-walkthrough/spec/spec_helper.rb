@@ -20,6 +20,7 @@
 ENV['RACK_ENV'] = 'test'
 require './app'
 require 'database_cleaner'
+require 'capybara/rspec'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
