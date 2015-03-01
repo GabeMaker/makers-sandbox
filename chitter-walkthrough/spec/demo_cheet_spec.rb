@@ -18,9 +18,9 @@ describe Cheet do
       expect(cheet.text).to eq('Hello World')
       expect(cheet.time).to eq('Just now')
       # If we want to, we can destroy it
-      cheet.destroy
+      # cheet.destroy
       # so now we have no cheets in the database
-      expect(Cheet.count).to eq(0)
+      # expect(Cheet.count).to eq(0)
     end
 
   end
