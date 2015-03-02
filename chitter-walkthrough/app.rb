@@ -25,7 +25,7 @@ end
 post '/cheets' do
   content = params["content"]
   author = params["author"]
-  Cheet.create(:text => content, :time => Time.now.to_s, :author => author)
+  Cheet.create(:text => content, :author => author)
   redirect to('/')
 end
 
