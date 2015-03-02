@@ -1,11 +1,16 @@
 <ul>
   <% @cheets.each do |cheet| %>
-    <li><%= cheet.text %> at <%= cheet.time %></li>
+    <li><%= cheet.text %> by <%= cheet.author %> at <%= cheet.time %></li>
   <% end %>
 </ul>
 
 
 <form action="/cheets" method="post">
     Your Cheet: <input type="text" name="content">
+
+    <% if current_user %>
+      <input type="hidden" name="author" value="<%= current_user.username %>">
+    <% end %>
+
     <input type="submit" value="Cheet!">
 </form>
