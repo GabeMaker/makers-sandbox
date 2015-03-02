@@ -1,13 +1,32 @@
 <body>
 
-  <% if current_user %>
+<h1>This is Chitter</h1>
+
+
+<% if !current_user %>
+  <form method="get" action="/sessions/new">
+    <input type="submit" value="Sign in!">
+  </form>
+  <form method="get" action="/users/new">
+    <input type="submit" value="Sign up!">
+  </form>
+<% else %>
+    <form method="post" action="/sessions">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign out">
+    </form>
+<% end %>
+
+<!--   <% if current_user %>
     Hi <%= current_user.username %>!
     <form method="post" action="/sessions">
       <input type="hidden" name="_method" value="delete">
       <input type="submit" value="Sign out">
     </form>
   <% end %>
-  <%= yield %>
+
+ -->
+ <%= yield %>
 
   <% if flash[:errors] && !flash[:errors].empty? %>
     Sorry, there were the following problems with the form.
@@ -25,10 +44,3 @@
   <% end %>
 
 </body>
-
-
-
-  <% if current_user %>
-
-
-  <% end %>
