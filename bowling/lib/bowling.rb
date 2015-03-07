@@ -9,7 +9,16 @@ class Bowling
   end
 
   def bowl(ball_one, ball_two = :strike)
-    @score += ball_one + ball_two if ball_two != :strike
+    if ball_two != :strike
+      @score += ball_one + ball_two
+      if @strike == true
+      @score += 10 + ball_one + ball_two
+      @strike == false
+    end
+    else
+      @strike = true
+    end
+
   end
 
 end
