@@ -19,4 +19,9 @@ describe Bowling do
     expect(game.score).to eq 18
   end
 
+  it 'should not register any points when a strike is scored' do
+    game = Bowling.new
+    game.bowl(10)
+  end
+
 end

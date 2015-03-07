@@ -8,8 +8,8 @@ class Bowling
     @score
   end
 
-  def bowl(ball_one, ball_two)
-    @score += ball_one + ball_two
+  def bowl(ball_one, ball_two = :strike)
+    @score += ball_one + ball_two if ball_two != :strike
   end
 
 end
