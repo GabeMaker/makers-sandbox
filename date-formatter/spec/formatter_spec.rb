@@ -13,4 +13,8 @@ describe 'formatter' do
     expect(date.formatter).to eq ("April 11 2016")
   end
 
+  it 'recognises the month' do
+    date = "2016-05-11"
+    expect(date.formatter).to eq ("May 11 2016")
+  end
 end
