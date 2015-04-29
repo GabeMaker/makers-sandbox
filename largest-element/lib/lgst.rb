@@ -6,7 +6,15 @@ class Array
     elsif self.count == 1
       self.first
     else
-      self.last
+      largest = 0
+      self.each do |x|
+        if x > largest
+          largest = x
+        else
+          next
+        end
+      end
+      return largest
     end
   end
 
