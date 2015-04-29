@@ -3,8 +3,10 @@ class Array
   def lgst
     if self.count == 0
       nil
-    else
+    elsif self.count == 1
       self.first
+    else
+      self.last
     end
   end
 

@@ -13,4 +13,10 @@ describe 'a function that returns the largest element' do
       expect([1].lgst).to eq 1
     end
   end
+
+  context 'in a list of two' do
+    it 'returns the second element when it is larger' do
+      expect([1,2].lgst).to eq 2
+    end
+  end
 end
