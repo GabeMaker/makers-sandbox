@@ -10,4 +10,13 @@ describe Randomusic do
     end
   end
 
+  it 'should not repeat numbers' do
+    random = Randomusic.new.tracks(1979)
+    random.each_with_index do |x,i|
+      next if i == 0
+      test = random - [x]
+      expect(test.include?(x)).to be false
+    end
+  end
+
 end
