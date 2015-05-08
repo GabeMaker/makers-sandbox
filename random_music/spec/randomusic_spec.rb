@@ -19,4 +19,12 @@ describe Randomusic do
     end
   end
 
+  it 'should return 5 page numbers from 1980 - 1995' do
+    random = Randomusic.new.tracks(1994)
+    expect(random.count).to eq 5
+    random.each do |x|
+      expect(x >= 456 && x <= 740).to be true
+    end
+  end
+
 end
