@@ -16,4 +16,12 @@ describe 'fizzbuzz' do
       expect(fizzbuzz(x)).to eq x
     end
   end
+
+  it 'returns "fizz when passed multiples of 3 (not divisible by 5)' do
+    multiples = [3,6,9,12,18]
+    multiples.each do |x|
+      expect(fizzbuzz(x)). to eq 'fizz'
+    end
+  end
+
 end
