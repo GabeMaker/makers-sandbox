@@ -22,9 +22,13 @@ describe DockingStation do
     it { is_expected.to respond_to(:dock).with(1).argument }
 
     it 'raises an error when it is full' do
-      20.times { subject.dock Bike.new }
+      subject.capacity.times { subject.dock Bike.new }
       expect {subject.dock DockingStation.new }.to raise_error 'Docking station is full'
     end
+  end
+
+  it 'has a default capacity' do
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
   end
 
 end
