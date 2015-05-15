@@ -12,14 +12,17 @@ class DockingStation
   end
 
   def release_bike
-    fail 'No bikes available' if empty?
-    fail 'No bikes available' if none_working?
-    bikes.pop
+    fail 'No bikes available' if empty? || none_working?
+    working_bikes.pop
   end
 
   def dock bike
     fail 'Docking station is full' if full?
     bikes << bike
+  end
+
+  def working_bikes
+    bikes.select {|bike| bike.working?}
   end
 
   private
@@ -35,7 +38,6 @@ class DockingStation
   end
 
   def none_working?
-    working_bikes = bikes.select {|bike| bike.working?}
     working_bikes.empty?
   end
 
