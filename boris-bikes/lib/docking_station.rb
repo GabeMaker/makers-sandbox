@@ -13,6 +13,7 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty?
+    fail 'No bikes available' if none_working
     bikes.pop
   end
 
@@ -31,6 +32,16 @@ class DockingStation
 
   def full?
     bikes.count >= capacity
+  end
+
+  def none_working
+    working_bikes = []
+    bikes.each do |bike|
+      if bike.working?
+        working_bikes << bike
+      end
+    end
+    working_bikes.empty?
   end
 
 end

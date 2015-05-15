@@ -13,4 +13,12 @@ feature 'member of public returns bike' do
     expect { docking_station.dock bike }.not_to raise_error
   end
 
+  scenario 'docking station does not release broken bikes' do
+    docking_station = DockingStation.new
+    bike = Bike.new
+    bike.report_broken
+    docking_station.dock bike
+    expect {docking_station.release_bike}.to raise_error 'No bikes available'
+  end
+
 end
