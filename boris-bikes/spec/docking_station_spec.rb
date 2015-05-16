@@ -2,40 +2,34 @@ require 'docking_station'
 
 describe DockingStation do
 
-  let(:bike) {Bike.new}
-
   describe 'release_bike' do
 
     it { is_expected.to respond_to :release_bike }
 
-    it 'releases working bikes' do
-      subject.dock bike
-      bike = subject.release_bike
-      expect(bike).to be_working
-    end
 
     it 'raises an error when there are no bikes' do
       expect { subject.release_bike }.to raise_error 'No bikes available'
     end
 
     it 'raises an error when there are no working bikes' do
-      bike.report_broken
+      bike = double :bike, working?: false
       subject.dock bike
       expect { subject.release_bike }.to raise_error 'No bikes available'
     end
 
     it 'releases working bikes if some are broken' do
+      bike = double :bike, working?: true
       subject.dock bike
-      broken_bike = Bike.new
-      broken_bike.report_broken
+      broken_bike = double :broken_bike, working?: false
       subject.dock broken_bike
       expect(subject.release_bike).to eq bike
     end
 
     it 'releases bikes that have been docked longest' do
+      bike = double :bike, working?: true
       subject.dock bike
-      bike2 = Bike.new
-      subject.dock bike2
+      broken_bike = double :broken_bike, working?: false
+      subject.dock broken_bike
       expect(subject.release_bike).to eq bike
     end
 
@@ -46,8 +40,8 @@ describe DockingStation do
     it { is_expected.to respond_to(:dock).with(1).argument }
 
     it 'raises an error when it is full' do
-      subject.capacity.times { subject.dock bike }
-      expect {subject.dock DockingStation.new }.to raise_error 'Docking station is full'
+      subject.capacity.times { subject.dock double :bike }
+      expect {subject.dock double :bike }.to raise_error 'Docking station is full'
     end
   end
 
@@ -57,7 +51,7 @@ describe DockingStation do
 
   it 'can set a new capacity' do
     subject.capacity = 30
-    subject.capacity.times { subject.dock bike }
-    expect { subject.dock bike }.to raise_error 'Docking station is full'
+    subject.capacity.times { subject.dock double :bike }
+    expect { subject.dock double :bike }.to raise_error 'Docking station is full'
   end
 end
