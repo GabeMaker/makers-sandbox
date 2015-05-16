@@ -13,7 +13,7 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty? || none_working?
-    working_bikes.pop
+    working_bikes.shift
   end
 
   def dock bike

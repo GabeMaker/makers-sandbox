@@ -31,6 +31,15 @@ describe DockingStation do
       subject.dock broken
       expect(subject.release_bike).to eq working
     end
+
+    it 'releases bikes that have been docked longest' do
+      bike = Bike.new
+      subject.dock bike
+      bike2 = Bike.new
+      subject.dock bike2
+      expect(subject.release_bike).to eq bike
+    end
+
   end
 
   describe 'dock' do
