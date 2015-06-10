@@ -3,32 +3,32 @@
     <title>Forms</title>
   </head>
   <body>
-    <p>
-      Your Details:
-    </p>
-    <form>
-      <p> Name:
-      <input type="text" />
-      </p>
-      <p> Email:
-      <input type="email" />
-      </p>
-    </form>
-    <p>
-      Your Review:
-    </p>
-    <form>
+
+  <form>
+    <fieldset>
+      <legend>Your details</legend>
+      <label>Name:
+      <input type="text" name="name" />
+      </label><br />
+      <label>Email:
+      <input type="email" name="email" />
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Your Review:</legend>
       <p> How did you hear about us?
       <select name="referer">
         <option value="google">Google</option>
         <option value="friend">Friend</option>
         <option value="other">Other</option>
+      </select>
       </p>
       <p> Would you visit us again?
         <input type="radio" name="visit?" value="yes" /> Yes
         <input type="radio" name="visit?" value="no" /> No
         <input type="radio" name="visit?" value="maybe" checked="checked" /> Maybe
       </p>
-    </form>
+    </fieldset>
+  </form>
   </body>
 </html>
