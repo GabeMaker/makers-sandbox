@@ -1,5 +1,34 @@
-<form>
-  <p>What's the password?
-    <input type="text" name="password" maxlength="8">
-  </p>
-</form>
+<html>
+  <head>
+    <title>Forms</title>
+  </head>
+  <body>
+    <p>
+      Your Details:
+    </p>
+    <form>
+      <p> Name:
+      <input type="text" />
+      </p>
+      <p> Email:
+      <input type="email" />
+      </p>
+    </form>
+    <p>
+      Your Review:
+    </p>
+    <form>
+      <p> How did you hear about us?
+      <select name="referer">
+        <option value="google">Google</option>
+        <option value="friend">Friend</option>
+        <option value="other">Other</option>
+      </p>
+      <p> Would you visit us again?
+        <input type="radio" name="visit?" value="yes" /> Yes
+        <input type="radio" name="visit?" value="no" /> No
+        <input type="radio" name="visit?" value="maybe" checked="checked" /> Maybe
+      </p>
+    </form>
+  </body>
+</html>
