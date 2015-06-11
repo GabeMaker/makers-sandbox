@@ -3,41 +3,67 @@
     <title>Forms</title>
   </head>
   <body>
-
-  <form>
-    <fieldset>
-      <legend>Your details</legend>
-      <label>Name:
-      <input type="text" name="name" />
-      </label><br />
-      <label>Email:
-      <input type="email" name="email" />
-      </label>
-    </fieldset>
-    <fieldset>
-      <legend>Your Review:</legend>
-      <p> How did you hear about us?
-      <select name="referer">
-        <option value="google">Google</option>
-        <option value="friend">Friend</option>
-        <option value="other">Other</option>
-      </select>
-      </p>
-      <p> Would you visit us again?
-        <input type="radio" name="visit?" value="yes" /> Yes
-        <input type="radio" name="visit?" value="no" /> No
-        <input type="radio" name="visit?" value="maybe" checked="checked" /> Maybe
-      </p>
-      <p> Comments:
-        <textarea></textarea>
-      </p>
-      <p>
-        <input type="checkbox" name="sign-up?" /> Sign me up for email updates
-      </p>
-      <p>
-        <input type="submit" name="submit" value="Submit review" />
-      </p>
-    </fieldset>
-  </form>
+    <!-- "http://www.example.com/review.php" represents the URL of the page receiving information in the form when submitted-->
+    <form action="http://www.example.com/review.php">
+      <fieldset>
+        <legend>
+          Your details:
+        </legend>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" name="email" />
+        </label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>
+          Your Review:
+        </legend>
+        <p>
+          <label for="ref">
+            How did you hear about us?
+          </label>
+          <select name="referrer" id="ref">
+            <option value="google">Google</option>
+            <option value="friend">Friend</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+        <p>
+          Would you visit us again?
+          <br />
+          <label>
+            <input type="radio" name="visit?" value="yes" />
+            Yes
+          </label>
+          <label>
+            <input type="radio" name="visit?" value="no" />
+            No
+          </label>
+          <label>
+            <input type="radio" name="visit?" value="maybe" checked="checked" />
+            Maybe
+          </label>
+        </p>
+        <label for="comments">
+          Comments:
+        </label>
+        <br />
+        <textarea id="comments">
+        </textarea>
+        <br />
+        <label>
+          Sign me up for email updates
+          <input type="checkbox" name="signup" />
+        </label>
+        <br />
+        <input type="submit" value="Submit review" />
+      </fieldset>
+    </form>
   </body>
 </html>
