@@ -2,5 +2,6 @@
 
 A repo for storing:
 - MA work in progress
-- MA notes and resources
+- Notes and resources
+- Athletic restarts of MA tutorials and projects
 - Experimental code that doesn't fit anywhere else
