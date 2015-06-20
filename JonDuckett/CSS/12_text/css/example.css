@@ -1,0 +1,9 @@
+body {
+  padding: 20px;
+}
+
+h1 {
+  font-family: Georgia, Times, serif;
+  color: #6699FF;
+  text-shadow: 2px 2px 2px black;
+}
