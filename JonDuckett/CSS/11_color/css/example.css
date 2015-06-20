@@ -1,8 +1,16 @@
 body {
   background-color: darkgrey;
+  padding: 20px;
+  font-family: Verdana, sans-serif;
 }
 h1 {
   background-color: lightgrey;
+  padding: inherit;
+}
+p {
+  color: white;
+  padding: 5px;
+  margin: 0px;
 }
 p.fourteen {
   background-color: #0052CC;
@@ -12,4 +20,7 @@ p.thirteen {
 }
 p.twelve {
   background-color: #5C91DE;
+}
+p.eleven {
+  background-color: #7DA7E5;
 }
