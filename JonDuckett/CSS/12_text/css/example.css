@@ -4,7 +4,6 @@ body {
 }
 h1, h2 {
   font-family: Verdana, Arial, sans-serif;
-  letter-spacing: 0.2em;
 }
 h1 {
   font-size: 200%;
@@ -12,16 +11,20 @@ h1 {
 h2 {
   font-size: 1.3em;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 p {
   line-height: 1.5em;
-  word-spacing: 0.4em;
+}
+p:first-line {
+  font-weight: bold;
+}
+p.intro:first-letter {
+  font-size: 200%;
 }
 .credits {
   font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
   font-style: oblique;
   text-transform: capitalize;
-  text-decoration: underline;
-  /*font-style: italic;*/
+  text-align: right;
 }
