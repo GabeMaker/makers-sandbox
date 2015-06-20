@@ -1,9 +1,19 @@
 body {
   font-family: Georgia, Times, serif;
+  font-size: 12px;
 }
 h1, h2 {
   font-family: Verdana, Arial, sans-serif;
 }
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 1.3em;
+}
 .credits {
   font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-style: oblique;
+  /*font-style: italic;*/
 }
