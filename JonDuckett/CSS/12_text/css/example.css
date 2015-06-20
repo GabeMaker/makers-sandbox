@@ -28,3 +28,9 @@ p.intro:first-letter {
   text-transform: capitalize;
   text-align: right;
 }
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  color: red;
+}
