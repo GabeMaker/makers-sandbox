@@ -2,8 +2,17 @@ body {
   padding: 20px;
 }
 
+h1, h2 {
+  color: #527ACC;
+}
+
+
 h1 {
   font-family: Georgia, Times, serif;
-  color: #6699FF;
   text-shadow: 2px 2px 2px black;
+}
+h2 {
+  font-family: "Gill Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
