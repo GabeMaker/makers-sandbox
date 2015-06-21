@@ -34,3 +34,14 @@ p {
   width: 600px;
   margin: 20px auto 20px auto;
 }
+a {
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 6px 18px 5px 18px;
+}
+a:hover, a.on {
+  color: #c33;
+  /*this left in because I want to review why it was included but doesn't seem to have any effect here*/
+  /*background-color: #ffffff;*/
+}
