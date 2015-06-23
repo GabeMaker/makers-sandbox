@@ -13,3 +13,4 @@ My first script, based on an exercise from Codecademy. It simulates tossing a co
 
 Working on the string calculator suggested by [Roy Osherove](http://osherove.com/tdd-kata-1/) as a way to learn TDD. Just experimenting without TDD at this stage while learning about functions in PHP.
 
+- php supports performing math operations on strings e.g. `echo "10" + 1` will return `11` in the interative shell.
