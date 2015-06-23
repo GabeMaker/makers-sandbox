@@ -1,5 +1,7 @@
 <?php
 
+  error_reporting(0);
+
   function add($number1, $number2) {
     $number1 = is_null ($number1) ? 0 : $number1;
     $number2 = is_null ($number2) ? 0 : $number2;
@@ -13,4 +15,6 @@
   # 'test' for taking no arguments: returns 0
   print add()."\n";
 
+  # 'test' for taking empty string: returns 0
+  print add("")."\n";
 ?>
