@@ -5,18 +5,8 @@
   function add($number1, $number2) {
 
     $arguments = func_get_args();
-    echo $arguments[2];
-
-
-
-    $number1 = is_null ($number1) ? 0 : $number1;
-    $number2 = is_null ($number2) ? 0 : $number2;
-
-    return ($number1 + $number2);
+    return array_sum($arguments);
   }
-
-  $x = "4";
-  $y = "5";
 
   # 'test' for taking no arguments: returns 0
   print add()."\n";
@@ -24,7 +14,12 @@
   # 'test' for taking empty string: returns 0
   print add("")."\n";
 
-  # in order to add an unknown number of arguments
-  # 'test' for being able to access a 3rd argument - in: returns 6
-  print add(4,5,6)."\n";
+  # 'test' for 1 argument returning itself: returns 5
+  # 'test' for being able to add 2 arguments: returns 3
+  # 'test' for being able to add 3 arguments: returns 6
+  # 'test' for being able to add 5 arguments: returns 150
+  print add(5)."\n";
+  print add(1,2)."\n";
+  print add(1,2,3)."\n";
+  print add(10,20,30,40,50)."\n";
 ?>
