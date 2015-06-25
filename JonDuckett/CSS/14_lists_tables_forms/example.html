@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lists, Tables and Forms</title>
+  <link rel="stylesheet" type="text/css" href="css/example.css">
+</head>
+<body>
+  <h1>Poetry Workshops</h1>
+  <p>We will be...</p>
+  <p>Please note that...</p>
+  <ul>
+    <li>A Poetic Perspective</li>
+    <li>Walt Whitman at War</li>
+    <li>Found Poems and Outsider Poetry</li>
+  </ul>
+  <table>
+    <tr>
+      <th></th>
+      <th>New York</th>
+      <th>Chicago</th>
+      <th>San Francisco</th>
+    </tr>
+    <tr>
+      <th>A Poetic Perspective</th>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <th>Walt Whitman at War</th>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <th>Found Poems and Outsider Poetry</th>
+      <td>x</td>
+      <td>x</td>
+      <td>x</td>
+    </tr>
+  </table>
+  <form action="http://www.example.com/review.php">
+    <fieldset>
+      <legend>Register your interest</legend>
+      <label>
+        Your name: <input type="text" name="name"/> <br />
+      </label>
+      <label>
+        Your email: <input type="email" name="email"/> <br />
+      </label>
+      <label for="closest">Your closet center:</label>
+        <select name="center" id="closest">
+          <option value="NY">New York</option>
+          <option value="CHI">Chicago</option>
+          <option value="SF">San Fran</option>
+        </select> <br />
+      <label> Are you a member?</label>
+        <input type="radio" name="member?" value="yes" /> Yes
+        <input type="radio" name="member?" value="no" /> No
+      </label>
+    </fieldset>
+    <input type="submit" value="Register" />
+  </form>
+</body>
+</html>
