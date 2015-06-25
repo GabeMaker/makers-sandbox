@@ -14,52 +14,53 @@
     <li>Found Poems and Outsider Poetry</li>
   </ul>
   <table>
-    <tr>
+    <tr class="head">
       <th></th>
       <th>New York</th>
       <th>Chicago</th>
       <th>San Francisco</th>
     </tr>
-    <tr>
+    <tr class="odd">
       <th>A Poetic Perspective</th>
-      <td>x</td>
-      <td>x</td>
-      <td>x</td>
+      <td>Date<br />Time</td>
+      <td>Date<br />Time</td>
+      <td>Date<br />Time</td>
     </tr>
     <tr>
       <th>Walt Whitman at War</th>
-      <td>x</td>
-      <td>x</td>
-      <td>x</td>
+      <td>Date<br />Time</td>
+      <td>Date<br />Time</td>
+      <td>Date<br />Time</td>
     </tr>
-    <tr>
+    <tr class="odd">
       <th>Found Poems and Outsider Poetry</th>
-      <td>x</td>
-      <td>x</td>
-      <td>x</td>
+      <td>Date<br />Time</td>
+      <td>Date<br />Time</td>
+      <td>Date<br />Time</td>
     </tr>
   </table>
-  <form action="http://www.example.com/review.php">
+  <form action="http://www.example.com/review.php" method="get">
     <fieldset>
       <legend>Register your interest</legend>
-      <label>
-        Your name: <input type="text" name="name"/> <br />
-      </label>
-      <label>
-        Your email: <input type="email" name="email"/> <br />
-      </label>
-      <label for="closest">Your closet center:</label>
-        <select name="center" id="closest">
+      <p>
+        <label>Your name:</label>
+        <input type="text" name="name"/><br />
+        <label>Your email:</label>
+        <input type="email" name="email"/>
+      </p>
+      <p>
+        <label for="location">Your closet center:</label>
+        <select name="location" id="location">
           <option value="NY">New York</option>
           <option value="CHI">Chicago</option>
           <option value="SF">San Fran</option>
-        </select> <br />
-      <label> Are you a member?</label>
-        <input type="radio" name="member?" value="yes" /> Yes
-        <input type="radio" name="member?" value="no" /> No
-      </label>
+        </select>
+      </p>
+      <span class="title">Are you a member?</span>
+        <label><input type="radio" name="member?" value="yes" /> Yes </label>
+        <label><input type="radio" name="member?" value="no" /> No </label>
     </fieldset>
-    <input type="submit" value="Register" />
+    <div class="submit"><input type="submit" value="Register" /></div>
   </form>
 </body>
 </html>
