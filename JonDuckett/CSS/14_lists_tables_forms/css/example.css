@@ -4,3 +4,8 @@ body {
   color: #666;
   background-color: #f8f8f8 ;
 }
+
+li {
+  list-style-image: url("../images/Bright_lightbulb_16.png");
+  line-height: 1.75em;
+}
